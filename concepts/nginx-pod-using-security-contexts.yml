@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-using-security-context
+  labels:
+    app: nginx-app
+spec:
+  securityContext:
+    runAsUser: 1000
+  containers:
+   - name: nginx-container
+     image: nginx
+     securityContext:
+       runAsUser: 1000
+       capabilities:
+         add: ["SYS_TIME"]

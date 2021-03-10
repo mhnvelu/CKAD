@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    app: log-generator
+  name: pod-generates-logs
+spec:
+  containers:
+  - image: kodekloud/event-simulator
+    name: pod-generates-logs
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

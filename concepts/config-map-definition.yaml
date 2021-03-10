@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  color: green
+  key1: valu1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: app-config
